@@ -224,7 +224,8 @@ if not select(1, ...) then
 				return
 			end
 
-			lplr:Kick('Failed to find actor, Executor: '..identifyexecutor())
+			warn('Failed to find actor, Executor: '..identifyexecutor())
+			return
 		end)
 	else
 		vape.Load = function()
@@ -399,7 +400,7 @@ run(function()
 	end
 
 	if not root then
-		lplr:Kick('Failed to find root class, please contact 7GrandDad on discord.')
+		warn('Failed to find root class, please contact support.')
 		return
 	end
 
